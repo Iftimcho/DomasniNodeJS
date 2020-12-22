@@ -34,6 +34,7 @@ function div(x, y) {
     return x / y;
 }
 
+// Moja implementacija na funkcijata za eksponent.
 function powerOf(x, y) {
     let result = 1;
     for(i = 0; i < y; i++)
@@ -46,6 +47,7 @@ function powerOf(x, y) {
 function moduleFrom(x , y) {
     if(x % y === 0)
     {
+        // Mi vrakjase invalid operation koga nemase ostatok vo proverkata(validacijata) vo main.js modulot.
         return '0';
     }
     else
