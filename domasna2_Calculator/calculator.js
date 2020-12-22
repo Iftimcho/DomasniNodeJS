@@ -11,6 +11,8 @@ function calc(x, y, operator)
             return div(x,y);
         case 'e':
             return powerOf(x,y);
+        case '%':
+            return moduleFrom(x, y);
         default:
             break;
     }
@@ -41,7 +43,16 @@ function powerOf(x, y) {
     return result;
 }
 
-
+function moduleFrom(x , y) {
+    if(x % y === 0)
+    {
+        return '0';
+    }
+    else
+    {
+        return x % y;
+    }
+}
 
 module.exports = {
     calc,
