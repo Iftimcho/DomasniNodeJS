@@ -1,5 +1,4 @@
 
-const { TIMEOUT } = require('dns');
 const fs = require('fs');
 
 const Test = require('./crudModule');
