@@ -1,34 +1,23 @@
-// const eventListener = require('./moduleEmitter');
-// var EventEmitter = require('events');
-// // isntanca od klasata za da koristime metodi od nea
-// var ee = new EventEmitter();
-// // console.log('Something');
 
 const Test = require('./moduleEmitter');
 const listener = new Test();
 
 listener.on('room21', (argEvent) => {
-    if (isObject(argEvent))
-    {
+    if (isObject(argEvent)) {
         console.log('Message is');
         console.log(argEvent);
-    }
-    else if (Array.isArray(argEvent))
-    {
+    } else if (Array.isArray(argEvent)) {
         argEvent.forEach(item => {
             console.log('Item',item);
         })
-    }
-    else 
-    {
+    } else {
         console.log('Invalid type');
     }
 });
 
-function isObject(obj)
-{
+function isObject(obj) {
     return obj != null && obj.constructor.name === "Object"
-}
+};
 
 const message = {
     subject: 'JavaScript Module',
