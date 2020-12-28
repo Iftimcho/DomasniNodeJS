@@ -3,7 +3,7 @@
 // // isntanca od klasata za da koristime metodi od nea
 // var ee = new EventEmitter();
 // // console.log('Something');
-const EventEmitter = require('events');
+
 const Test = require('./moduleEmitter');
 const listener = new Test();
 
