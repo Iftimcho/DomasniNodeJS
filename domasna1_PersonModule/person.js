@@ -11,8 +11,9 @@ function getData(person) {
     }
 }
 
+// Iskoristiv ternaren operator za da vratam vrednost spored toa koj uslov e ispolnet
 function isAdult(person) {
-    return person.age >= 18 ? true : false;
+    return person.age >= 18 ? 'Polnoleten' : 'Maloleten';
 }
 
 module.exports = {
