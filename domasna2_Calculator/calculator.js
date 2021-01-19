@@ -1,6 +1,5 @@
-function calc(x, y, operator)
-{
-    switch(operator){
+function calc(x, y, operator) {
+    switch(operator) {
         case '+':
             return add(x,y);
         case '-':
@@ -14,7 +13,7 @@ function calc(x, y, operator)
         case '%':
             return moduleFrom(x, y);
         default:
-            break;
+            return 'Invalid operation. Enter valid operation from: +, -, *, /, e (exponent) or % (module)';
     }
 }
 
@@ -34,22 +33,21 @@ function div(x, y) {
     return x / y;
 }
 
-function powerOf(x, y) {
+// Moja implementacija na funkcijata za eksponent.
+function powerOf(x, y){
     let result = 1;
-    for(i = 0; i < y; i++)
-    {
+    for(i = 0; i < y; i++){
         result *= x;
     }
     return result;
 }
 
-function moduleFrom(x , y) {
-    if(x % y === 0)
-    {
+function moduleFrom(x , y){
+    if(x % y === 0){
+        // Mi vrakjase invalid operation koga nemase ostatok vo proverkata(validacijata) vo main.js modulot.
         return '0';
     }
-    else
-    {
+    else {
         return x % y;
     }
 }
