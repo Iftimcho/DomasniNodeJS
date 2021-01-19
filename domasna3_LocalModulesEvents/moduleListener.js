@@ -1,4 +1,3 @@
-
 const Test = require('./moduleEmitter');
 const listener = new Test();
 
